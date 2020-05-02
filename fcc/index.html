@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d3-fcc</title>
+    <script src="../d3-zip/d3.min.js"></script>
+    <style>
+        .h1Container{
+            background-color: rgb(73, 40, 104);
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+
+    <script>
+        var dataSet= [2,4,4,1,8]
+        d3.select('body')
+          .selectAll('h1') // there are no h1 tags
+          .data(dataSet)
+          .enter()         // enter means need h1 following by dataSet index
+          .append('h1')
+          .attr('class','h1Container')
+          .style('color','white')
+
+
+        d3.selectAll('li')
+          .text('new list');
+          
+    </script>
+</body>
+</html>

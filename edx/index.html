@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn D3 with edx</title>
+    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+    <script src="../d3-zip/d3.min.js"></script>
+    <style>
+        .part3{
+            border: 1px solid seagreen;
+            padding: 40px;
+        }
+        svg{
+            border: 1px solid salmon;
+        }
+    </style>
+</head>
+<body>
+    <!-- REVIEW -->
+    <!--(1) D3.js allows us to generate HTML and SVG elements based on data -->
+    <!--(2) We can apply functions to data sets to generete graphical elements. e.g charts -->
+
+   <div>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="yellow" stroke="blue" stroke-width="4">
+        </circle>
+        <rect x="50"  y="50" width="150" height="150"></rect>
+     </svg>
+   </div>
+
+    <!-- =======================  dynamically generate ================= -->
+    <!-- part 1 -->
+    <div class="part1">
+        <svg width="100" height="200">
+            <circle />
+        </svg>
+    </div>
+
+    <!-- part 2 -->
+    <div class="part2" style="border: 1px solid red;">
+        <svg class="chart2" height="200">
+        </svg>
+    </div>
+
+    <!-- part 3 -->
+    <div class="part3">
+        <svg class="chart3" height="750" width="800" >
+        </svg>
+    </div>
+
+<script src="index.js"></script>
+</body>
+</html>

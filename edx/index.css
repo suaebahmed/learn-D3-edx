@@ -1,0 +1,21 @@
+.part1 circle:hover{
+    fill: green !important;
+}
+
+/* part 2 */
+rect{
+    fill: darkblue;
+}
+rect:hover{
+    fill: darkmagenta;
+}
+.chart text{
+    fill: black;
+    font: 10px;
+    text-anchor: end;
+}
+/* chart 3 */
+.chart3 circle:hover{
+    opacity: 0.4 !important;
+    fill: aqua !important;
+}
