@@ -8,8 +8,8 @@ var circle ={
     width: 4,
     fill: 'yellow'
 };
-var svg = d3.select('.part1 svg');
-    svg.select("circle")
+var svg1 = d3.select('.part1 svg');
+    svg1.select("circle")
        .attr('cx',circle.x)
        .attr('cy',circle.y)
        .attr('r',circle.r)
@@ -21,9 +21,9 @@ var svg = d3.select('.part1 svg');
        })
 // // -------------------------------  part 2 -----------
 var numbers = [40, 130, 75, 170];
-var svg = d3.select('.part2 svg');
+var svg2 = d3.select('.part2 svg');
 
-var selection1 = svg.selectAll('g')
+var selection1 = svg2.selectAll('g')
          .data(numbers)
          .enter().append('g')
          .attr('transform', (d,i)=>{
@@ -40,7 +40,6 @@ selection1.append('text')
          .text((d)=>{
              return d/10;
          });
-selection1.append('p');
 // ----------------------------  part 3  ------------
 // bread-room
 var values = [
@@ -54,14 +53,14 @@ var values = [
 
 
 
-var svg = d3.select('.part3 svg');
+var svg3 = d3.select('.part3 svg');
 
-svg.append('text')
+svg3.append('text')
     .attr("x",10)
     .attr('y',10)
     .text("hello world")
 
-var selection = svg.selectAll("g")
+var selection = svg3.selectAll("g")
                    .data(values)
                    .enter()
                    .append("g")
@@ -91,7 +90,7 @@ var xScal = d3.scaleLinear()
               .domain([0,w*2])
               .range([0,w])
 var xAxis = d3.axisBottom(xScal);
-    svg.append("g")
+    svg3.append("g")
     .attr('transform','translate(10,410)')
     .call(xAxis)
 
@@ -100,7 +99,7 @@ var yScal = d3.scaleLinear()
               .range([0,h])
 
 var yAxis = d3.axisRight(yScal);
-    svg.append("g")
+    svg3.append("g")
     .attr('transform','translate(10,10)')
     .call(yAxis)
 

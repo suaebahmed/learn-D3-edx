@@ -1,0 +1,84 @@
+h1{
+    background-color: orange;
+    padding: 10px;
+    margin: 20px 50px;
+}
+#mySvg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myCicle{
+    stroke-dashoffset: 150;
+    stroke-dasharray: 150;
+    animation: panda 2s ease-in forwards;
+}
+#myPath{
+    stroke-dashoffset: 40;
+    stroke-dasharray: 40;
+    animation: panda 1s ease-in 2s forwards;
+
+}
+@keyframes panda{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+/* ----------------------------------- animation 2 ---------------------*/
+.iconContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 50px;
+    padding: 40px 10px;
+}
+.icon{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    cursor: pointer;
+}
+.iconContainer .icon path
+{
+    fill: transparent;
+    stroke-width: 1;
+    stroke: rgb(30, 38, 63);
+}
+.iconContainer .moon path
+{
+    stroke-dasharray: 153;
+     /* ---------------  stroke-deshoffset  then we update offset in animation-------*/
+    stroke-dashoffset: 0;   
+}
+.iconContainer .moon:hover path
+{
+    animation: animate-heart 1.5s linear forwards;
+}
+@keyframes animate-heart{
+     0%{
+         stroke-dashoffset: 5; 
+    } 
+    25%{
+        stroke-dashoffset: 35;
+    }
+    50%{
+        stroke-dashoffset: 78;
+    }
+    75%{
+        stroke-dashoffset: 110;
+        /* stroke-dasharray: 110; */
+    }
+    100%{
+        stroke-dashoffset: 153;
+        /* stroke-dasharray: 153; */
+        fill: royalblue;
+    }
+}
+
+/* ------------------- add class with js ----------- */
+.heartPathWithClass{
+    transition: all 2s linear;
+    fill: rgba(247, 56, 56, 0.993) !important;
+    transform: scale(1.1);
+    stroke-width: 0 !important;
+}
